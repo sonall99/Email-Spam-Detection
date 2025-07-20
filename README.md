@@ -34,7 +34,7 @@ This is a machine learning web application that classifies messages (Email or SM
 
 ---
 ## 🌐 Live Demo
-👉 [link](https://email-spam-detection-99.streamlit.app/)
+👉 [Click Here](https://email-spam-detection-99.streamlit.app/)
 
 ---
 

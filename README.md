@@ -1,6 +1,6 @@
 # 📩 Email/SMS Spam Classifier
 
-This is a machine learning web application built using **Streamlit** that classifies messages (Email or SMS) as **Spam** or **Not Spam** using **Naive Bayes classifier** and **TF-IDF vectorization**.  
+This is a machine learning web application that classifies messages (Email or SMS) as **Spam** or **Not Spam** using **Naive Bayes classifier** and **TF-IDF vectorization**.  
 
 ---
 
@@ -50,7 +50,7 @@ cd spam-classifier
 ```bash
 pip install -r requirements.txt
 ```
-### 3.Run the app
+### 3. Run the app
 ```bash
 streamlit run spam-app.py
 ```

@@ -12,19 +12,25 @@ nltk.download('punkt')
 # Streamlit page config
 st.set_page_config(page_title="Spam Classifier", page_icon="📩", layout="centered")
 
-# Custom CSS
+# Set full-page background and text styles
 st.markdown("""
     <style>
-        body {
-            background-color: #f0f2f6;
+        .stApp {
+            background-color: #FFC1CC;
+            color: #3B0A25;
         }
-        .stTextArea > label {
-            font-size: 18px;
-            color: #1f4e79;
+        h1, h2, h3 {
+            color: #8B0000;
+        }
+        .stTextArea textarea {
+            background-color: #fff5f7;
+            color: #3B0A25;
+        }
+        .css-1cpxqw2 edgvbvh3 {  /* Optional: adjust button colors if needed */
+            background-color: #8B0000;
         }
     </style>
 """, unsafe_allow_html=True)
-
 ps = PorterStemmer()
 
 def transform_text(text):
@@ -56,11 +62,25 @@ tfidf = pickle.load(open('vectorizer.pkl','rb'))
 model = pickle.load(open('model.pkl','rb'))
 
 # Title and subtitle
-st.markdown("<h1 style='text-align: center; color: #6a1b9a;'>📧 Email/SMS Spam Classifier</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; color: #555;'>Instantly classify messages using Machine Learning 🚀</p>", unsafe_allow_html=True)
+st.title("📩 Email/SMS Spam Classifier")
+st.markdown("### 💡 Enter your message below to find out if it's SPAM or Not.")
 
 # Input area
 text_sms = st.text_area("✉️ Enter your message below:", height=150)
+
+# Custom styled button
+st.markdown("""
+    <style>
+    div.stButton > button {
+        background-color: #8B0000;
+        color: white;
+        height: 3em;
+        width: 100%;
+        border-radius: 10px;
+        font-size: 1.2em;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
 # Predict button
 if st.button("🔍 Predict"):

@@ -34,7 +34,7 @@ This is a machine learning web application built using **Streamlit** that classi
 
 ---
 ## 🌐 Live Demo
-👉 [https://movie-recommender-system-mlproject.streamlit.app/](https://email-spam-detection-99.streamlit.app/)
+👉 [link](https://email-spam-detection-99.streamlit.app/)
 
 ---
 
